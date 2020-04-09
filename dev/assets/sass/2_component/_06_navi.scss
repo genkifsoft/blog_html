@@ -1,0 +1,50 @@
+/*------------------------------------------------------------
+navi
+------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+.c-menu{
+    height: 50px;
+    position: relative;
+    background-color: #ffffff;
+    nav{
+        width: $baseWidth;
+        z-index: 2;
+        position: absolute;
+        h1{
+            font-weight: bold;
+            font-size: 2.0rem;
+            display: flex;
+            align-items: center;
+        }
+        display: flex;
+        justify-content: space-between;
+        ul{
+            height: 50px;
+            align-items: center;
+            display: flex;
+            max-width: $baseWidth;
+            display: flex;
+            z-index: 0;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            li{
+                padding: 0 10px;
+            }
+        }
+    }
+}
+.c-menu::before{
+    height: 50px;
+    transform: skew(-30deg,0deg);
+    left: 25%;
+    background-color: #fbca00;
+    width: 100%;
+    z-index: 1;
+    content: "";
+    position: absolute;
+    right: auto;
+    top: 0;
+}

@@ -1,0 +1,492 @@
+@charset "UTF-8";
+/*------------------------------------------------------------
+	Reset
+------------------------------------------------------------*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, dialog, figure, footer, header,
+nav, section,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, main {
+  display: block;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  -webkit-text-size-adjust: 100%;
+}
+
+body, table,
+input, textarea, select, option,
+h1, h2, h3, h4, h5, h6 {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+table,
+input, textarea, select, option {
+  line-height: 1.1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+:focus {
+  outline: 0;
+}
+
+ins {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+img {
+  vertical-align: top;
+}
+
+a,
+a img {
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover,
+a:hover img {
+  opacity: 0.80;
+  filter: alpha(opacity=80);
+  -ms-filter: "alpha(opacity=80)";
+}
+
+img {
+  max-width: 100%;
+}
+
+.sp-only {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .pc-only {
+    display: none;
+  }
+  .sp-only {
+    display: block;
+  }
+}
+
+/*≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
+// Layout .l-
+≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡*/
+/*Header*/
+.c-header__info {
+  background-color: #252525;
+}
+
+.c-header__info ul {
+  margin: auto;
+  display: -webkit-box;
+  display: flex;
+  color: #ccc;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  max-width: 1200px;
+}
+
+.c-header__info ul li {
+  padding: 5px 10px;
+  float: left;
+}
+
+/*------------------------------------------------------------
+footer
+------------------------------------------------------------*/
+/*------------------------------------------------------------
+sidebar
+------------------------------------------------------------*/
+/* Breadcrumb
+------------------------------------------------------------*/
+/* layout
+------------------------------------------------------------*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+@media only screen and (max-width: 767px) {
+  body {
+    max-width: 320px;
+  }
+}
+
+main {
+  padding: 0px;
+  margin: 0px;
+}
+
+.l-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.width-container {
+  max-width: 1200px;
+}
+
+.clear_fix::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/* layout
+------------------------------------------------------------*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
+  min-width: 1200px;
+  line-height: 1.5;
+}
+
+@media only screen and (max-width: 767px) {
+  body {
+    min-width: 320px;
+  }
+}
+
+.c-news__space {
+  margin-bottom: 30px;
+}
+
+main {
+  padding: 0px;
+  margin: 0px;
+}
+
+.c-link {
+  height: 45px;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  margin: 40px 0px 70px;
+}
+
+.c-link:before {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.c-link__anchor {
+  height: 45px;
+  width: 300px;
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+  background: url("../img/anchor_link1.png") no-repeat center;
+}
+
+.c-link__anchor:not(:last-child) {
+  width: 300px;
+  height: 100%;
+  float: left;
+  margin-right: 45px;
+}
+
+.c-link__anchor:after {
+  margin-right: 0px;
+}
+
+.c-link p:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f078";
+  display: inline-block;
+  padding-right: 5px;
+  vertical-align: middle;
+  font-weight: 900;
+}
+
+.c-anchor1 {
+  display: block;
+}
+
+.c-anchor1__list, .c-anchor2__list {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.c-anchor1 h4 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.c-anchor1 h4:after {
+  content: "";
+  margin: 5px 0px 25px;
+  display: block;
+  height: 2px;
+  background: url("../img/link.png") repeat-x center;
+}
+
+.c-anchor1 p {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.c-anchor1__item {
+  margin-bottom: 23px;
+  width: 300px;
+  margin-right: 35px;
+}
+
+.c-anchor1__item:nth-child(3n+0) {
+  margin-right: 0px;
+}
+
+.c-anchor1__item__img {
+  width: 300px;
+  height: 185px;
+}
+
+.c-anchor1__item__info p {
+  text-align: justify;
+}
+
+.c-anchor__text {
+  margin: 15px 0px 20px;
+  padding: 6px 22px;
+  display: inline-block;
+  background-color: #a3d39c;
+  text-align: justify;
+}
+
+.c-anchor--orange {
+  background-color: #ffdfdf !important;
+}
+
+.c-anchor--yellow {
+  background-color: #fff799 !important;
+}
+
+.c-anchor2 h4 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.c-anchor2 h4:after {
+  content: "";
+  margin: 5px 0px 25px;
+  display: block;
+  height: 2px;
+  background: url("../img/link.png") repeat-x center;
+}
+
+.c-anchor2__item {
+  margin-bottom: 23px;
+  width: 235px;
+  margin-right: 20px;
+}
+
+.c-anchor2__item:nth-child(4n+0) {
+  margin-right: 0px;
+}
+
+/*≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
+// Component .c-
+≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡*/
+/*------------------------------------------------------------
+btn
+------------------------------------------------------------*/
+/*
+------------------------------------------------------------*/
+.c-btn1 {
+  display: inline-block;
+  padding: 10px 50px;
+  font-size: 1.6rem;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  line-height: 1;
+}
+
+/*------------------------------------------------------------
+title
+------------------------------------------------------------*/
+/*
+------------------------------------------------------------*/
+/*------------------------------------------------------------
+icon
+------------------------------------------------------------*/
+/*
+------------------------------------------------------------*/
+/*------------------------------------------------------------
+form
+------------------------------------------------------------*/
+/*
+------------------------------------------------------------*/
+/*------------------------------------------------------------
+text
+------------------------------------------------------------*/
+/*
+------------------------------------------------------------*/
+/*------------------------------------------------------------
+navi
+------------------------------------------------------------*/
+/*
+------------------------------------------------------------*/
+.c-menu {
+  height: 50px;
+  position: relative;
+  background-color: #ffffff;
+}
+
+.c-menu nav {
+  width: 1200px;
+  z-index: 2;
+  position: absolute;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+
+.c-menu nav h1 {
+  font-weight: bold;
+  font-size: 2.0rem;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.c-menu nav ul {
+  height: 50px;
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: flex;
+  max-width: 1200px;
+  display: flex;
+  z-index: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.c-menu nav ul li {
+  padding: 0 10px;
+}
+
+.c-menu::before {
+  height: 50px;
+  -webkit-transform: skew(-30deg, 0deg);
+  transform: skew(-30deg, 0deg);
+  left: 25%;
+  background-color: #fbca00;
+  width: 100%;
+  z-index: 1;
+  content: "";
+  position: absolute;
+  right: auto;
+  top: 0;
+}
+
+/*------------------------------------------------------------
+img
+------------------------------------------------------------*/
+/*
+------------------------------------------------------------*/
+/*------------------------------------------------------------
+list
+------------------------------------------------------------*/
+/*
+------------------------------------------------------------*/
+/*------------------------------------------------------------
+table
+------------------------------------------------------------*/
+/*
+------------------------------------------------------------*/
+/*------------------------------------------------------------
+line
+------------------------------------------------------------*/
+/*
+------------------------------------------------------------*/
+/*------------------------------------------------------------
+video
+------------------------------------------------------------*/
+/*
+------------------------------------------------------------*/
+/*------------------------------------------------------------
+video
+------------------------------------------------------------*/
+/* Slider
+------------------------------------------------------------*/
+/*------------------------------------------------------------
+other
+------------------------------------------------------------*/
+/*
+------------------------------------------------------------*/
+/*≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
+// Project .p-
+≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡*/
+/*------------------------------------------------------------
+Css of home page
+------------------------------------------------------------*/
+.p-top {
+  line-height: 2;
+}
+
+/*------------------------------------------------------------
+Css of home page
+------------------------------------------------------------*/
+.p-about {
+  line-height: 2;
+}
+
+/*≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
+// Utility .u-
+≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡*/
+.u-blue {
+  color: #1f53fa;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,29 @@
+/* layout
+------------------------------------------------------------*/
+body{
+	font-family: $mainFonts;
+	font-size: 1.3rem;
+	// max-width: $baseWidth;
+	line-height: 1.5;
+	@include breakpoint(sp) {
+		max-width: 320px;
+	}
+}
+main{
+	padding: 0px;
+	margin: 0px;
+}
+
+//-------------------------------------------------------
+.l-container{
+	max-width: $baseWidth;
+	margin: 0 auto;
+}
+.width-container{
+	max-width: $baseWidth;
+}
+.clear_fix::after{
+	content: "";
+	clear: both;
+	display: block;
+}

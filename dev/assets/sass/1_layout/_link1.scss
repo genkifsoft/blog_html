@@ -1,0 +1,136 @@
+/* layout
+------------------------------------------------------------*/
+body{
+	font-family: $mainFonts;
+	font-size: 1.4rem;
+	min-width: $baseWidth;
+	line-height: 1.5;
+	@include breakpoint(sp) {
+		min-width: 320px;
+	}
+}
+.c-news__space{
+	margin-bottom: 30px;
+}
+//-------------------------------------------------------
+main{
+	padding: 0px;
+	margin: 0px;
+}
+.c-link{
+    &:before{
+        content: "";
+        display: block;
+        clear: both;
+    }
+    height: 45px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 40px 0px 70px;
+    &__anchor{
+        height: 45px;
+        width: 300px;
+        text-align: center;
+        line-height: 45px;
+        color: #fff;
+        background: url("../img/anchor_link1.png") no-repeat center;
+    }
+    &__anchor:not(:last-child){
+        width: 300px;
+        height: 100%;
+        float: left;
+        margin-right: 45px;
+    }
+    &__anchor:after{
+        margin-right: 0px;
+
+    }
+    p:before{
+        font-family: "Font Awesome 5 Free";
+        content: "\f078";
+        display: inline-block;
+        padding-right: 5px;
+        vertical-align: middle;
+        font-weight: 900;
+    }
+}
+.c-anchor1{
+    &__list{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    display: block;
+    h4{
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+    h4:after{
+        content: "";
+        margin: 5px 0px 25px;
+        display: block;
+        height: 2px;
+        background: url("../img/link.png") repeat-x center;
+    }
+    p{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    &__item{
+        margin-bottom: 23px;
+        width: 300px;
+        margin-right: 35px;
+    }
+    &__item:nth-child(3n+0){
+        margin-right: 0px;
+    }
+    &__item__img{
+        width: 300px;
+        height: 185px;
+    }
+    &__item__info{
+        p{
+            text-align: justify;
+        }
+    }
+}
+.c-anchor{
+    &__text{
+        margin: 15px 0px 20px;
+        padding: 6px 22px;
+        display: inline-block;
+        background-color: $colorButtonBlue;
+        text-align: justify;
+    }
+    &--orange{
+        background-color: $colorButtonOrange !important;
+    }
+    &--yellow{
+        background-color: $colorButtonYellow !important;
+    }
+}
+.c-anchor2{
+    &__list{
+        @extend .c-anchor1__list;
+    }
+    h4{
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+    h4:after{
+        content: "";
+        margin: 5px 0px 25px;
+        display: block;
+        height: 2px;
+        background: url("../img/link.png") repeat-x center;
+    }
+    &__item{
+        margin-bottom: 23px;
+        width: 235px;
+        margin-right: 20px;
+    }
+    &__item:nth-child(4n+0){
+        margin-right: 0px;
+    }
+}
