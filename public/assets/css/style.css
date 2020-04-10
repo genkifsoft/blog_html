@@ -153,8 +153,28 @@ footer
   justify-content: space-between;
 }
 
+@media only screen and (max-width: 767px) {
+  .c-footer .l-container {
+    display: block;
+    padding: 10px;
+  }
+}
+
 .c-footer__left {
   width: calc(100% - 700px);
+}
+
+@media only screen and (max-width: 767px) {
+  .c-footer__left {
+    width: 100%;
+    padding-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .c-footer__center {
+    padding-bottom: 10px;
+  }
 }
 
 .c-footer::after {
@@ -172,8 +192,8 @@ sidebar
 /* layout
 ------------------------------------------------------------*/
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.3rem;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
   line-height: 1.5;
 }
 
@@ -327,13 +347,21 @@ navi
   text-transform: uppercase;
 }
 
+@media only screen and (max-width: 767px) {
+  .c-menu nav ul {
+    height: 100vh;
+    z-index: 999;
+  }
+}
+
 .c-menu nav ul li {
   padding: 0 10px;
 }
 
 @media only screen and (max-width: 767px) {
   .c-menu nav ul li {
-    display: none;
+    padding: 20px 0px 0px 0;
+    color: #fff;
   }
 }
 
@@ -375,6 +403,18 @@ navi
   display: none;
 }
 
+.__show--menu {
+  text-align: center !important;
+  width: 100%;
+  position: absolute;
+  background-color: #615d50;
+  top: 75px;
+}
+
+.__show--menu li {
+  display: block;
+}
+
 /*------------------------------------------------------------
 img
 ------------------------------------------------------------*/
@@ -402,6 +442,7 @@ list
 @media only screen and (max-width: 767px) {
   .col-3__item {
     width: 100%;
+    padding: 0 10px;
   }
 }
 
@@ -504,6 +545,16 @@ other
 
 .c-scroll button i {
   color: #fff;
+}
+
+@media only screen and (max-width: 767px) {
+  .c-scroll button {
+    opacity: 0.6;
+    background-color: #fff;
+  }
+  .c-scroll button i {
+    color: black;
+  }
 }
 
 .c-scroll button:hover {

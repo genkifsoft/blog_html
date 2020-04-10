@@ -11,6 +11,7 @@ list
     &__item{
         @include breakpoint(sp) {
             width: 100%;
+            padding: 0 10px;
         }
         width: 33.33%;
         padding: 0 5px;
