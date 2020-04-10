@@ -5,14 +5,37 @@ navi
 /*
 ------------------------------------------------------------*/
 .c-menu{
+    @include breakpoint(sp) {
+        height: 75px;
+    }
     height: 50px;
     position: relative;
-    background-color: #ffffff;
+    background-color: #fbca00;
+    &__icon{
+        display: none;
+        @include breakpoint(sp) {
+            // padding-top: 3px;
+            display: block;
+            width: 70px;
+            height: 70px;
+        }
+    }
+    
     nav{
-        width: $baseWidth;
-        z-index: 2;
-        position: absolute;
+        position: relative;
+        @include breakpoint(sp) {
+            justify-content: flex-end;
+            display: flex;
+            align-items: center;
+            height: 75px;
+        }
         h1{
+            @include breakpoint(sp) {
+                position: absolute;
+                left: 0;
+                line-height: 75px;
+            }
+            padding: 0 10px;
             font-weight: bold;
             font-size: 2.0rem;
             display: flex;
@@ -22,29 +45,53 @@ navi
         justify-content: space-between;
         ul{
             height: 50px;
+            
             align-items: center;
             display: flex;
-            max-width: $baseWidth;
+            // max-width: $baseWidth;
             display: flex;
-            z-index: 0;
             font-size: 1.5rem;
             font-weight: bold;
             text-transform: uppercase;
             li{
+                @include breakpoint(sp) {
+                    display: none;
+                }
                 padding: 0 10px;
+            }
+
+            >li > ul{
+                display: none;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+            >li:last-child {
+                // width: 150px;
+                z-index: 999;
+                position: relative;
+            }
+            >li:last-child:hover > ul{
+                height: auto;
+                margin-top: 30px;
+                display: block;
+                background-color: #fbca00f5;
+            }
+
+            >li:last-child > ul > li{
+                padding-bottom: 10px;
+            }
+            >li:last-child > ul li:hover{
+                display: block;
+            }
+            
+            @include breakpoint(sp) {
+                display: block;
+                text-align: right;
             }
         }
     }
 }
-.c-menu::before{
-    height: 50px;
-    transform: skew(-30deg,0deg);
-    left: 25%;
-    background-color: #fbca00;
-    width: 100%;
-    z-index: 1;
-    content: "";
-    position: absolute;
-    right: auto;
-    top: 0;
+.__hidden{
+    display: none;
 }

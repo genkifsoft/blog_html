@@ -4,6 +4,46 @@ list
 
 /*
 ------------------------------------------------------------*/
-.c-list1{
-	
+.col-3{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &__item{
+        @include breakpoint(sp) {
+            width: 100%;
+        }
+        width: 33.33%;
+        padding: 0 5px;
+        // background-color: #ccc;
+        margin-bottom: 20px;
+        .c-date__post{
+            padding: 5px;
+        }
+        .c-description{
+            padding: 0 5px 5px 5px;
+        }
+    }
+    &__item:nth-child(3n+1){
+        padding: 0px 10px 0 0;
+        @include breakpoint(sp) {
+            padding: 10px;
+        }
+    }
+    &__item:nth-child(3n+3){
+        padding: 0px 0px 0 10px;
+        @include breakpoint(sp) {
+            padding: 10px;
+        }
+    }
+    &__img{
+        height: 200px;
+        position: relative;
+        img{
+            @include breakpoint(sp) {
+                width: 100%;
+            }
+            background-size: contain;
+            height: 100%;
+        }
+    }
 }

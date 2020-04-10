@@ -1,3 +1,22 @@
 /*------------------------------------------------------------
 footer
 ------------------------------------------------------------*/
+.c-footer{
+    background-color: #3d454c;
+    margin-top: 20px;
+    color: #ffffff;
+    .l-container{
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__left{
+        width: calc(100% - 700px);
+    }
+}
+.c-footer::after{
+    content: "";
+    height: 5px;
+    display: block;
+    background-color: #fbca00;
+}

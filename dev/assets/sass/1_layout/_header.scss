@@ -1,14 +1,12 @@
 /*Header*/
 .c-header{
-    .l-container{
-        
-    }
+    padding-bottom: 20px;
     &__info{
-        background-color: #252525;
+        background-color: #3d454c;
         ul{
             margin: auto;
             display: flex;
-            color: #ccc;
+            color: #ffffff;
             justify-content: flex-end;
             max-width: $baseWidth;
             li{
